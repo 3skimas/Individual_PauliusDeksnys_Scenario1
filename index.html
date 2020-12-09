@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Booking System</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="circle" id="redirect"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+        
+        <div class="overlay"></div> <!-- Body background overlay -->
+            <h1 style="color: var(--white); text-align: center;">Booking system</h1>
+
+        <!-- Table photos -->
+        <section class="table"> 
+           
+            <div class="photo">
+                <img src="img/chair.svg" alt="chair" height="200"width="370" /> 
+            </div>
+            <div class="photo">
+                <img src="img/chair.svg" alt="chair" height="200"width="370" /> 
+            </div>
+        </section>
+        
+        <!-- Booking form -->
+        <section class="bookingas">
+            <form name="bookingform">
+                <h1>Make sure to fill information bellow</h1>
+                <input type="text" name="name" placeholder="Name" id="name" oninput="this.value = this.value.replace(/[^a-z]/gi, '')"/> <!-- Removing from input special characters and numbers-->
+                <input type="text" name="surname" placeholder="Surname" id="surname" oninput="this.value = this.value.replace(/[^a-z]/gi, '')"/> <!-- Removing from input special characters and numbers-->
+                <input type="date" name="date" min="2020-11-01" max="2020-11-30" id="datetime"/>
+                <div>
+                    <input type="submit" class="btn-1" id="btn" value="Reservate table" onclick="run();"/> <!-- Writing data from input values to localstorage -->
+                </div>
+            </form>
+        </section>
+
+    <script src="./js/booking.js"></script>
+    </body>
+</html>
